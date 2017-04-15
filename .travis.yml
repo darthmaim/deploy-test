@@ -1,0 +1,11 @@
+language: sh
+
+script: ./build.sh
+
+deploy:
+  provider: pages
+  local_dir: out
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
